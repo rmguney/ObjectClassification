@@ -8,16 +8,16 @@ def main():
     print("4. Run Comparison")
 
     choice = input("Enter the number of your choice: ")
-
+""" 
     if choice == "1":
-        from src.test_cifar10_dataset import test_cifar10_dataset
-        test_cifar10_dataset()
+        from src.test import test_dataset
+        test_dataset()
 
     elif choice == "2":
         from src.models.train_mobilenet import train_mobilenet
-        from src.cifar10_dataset import get_cifar10_dataloaders
+        from src.dataset import get_dataset_dataloaders
 
-        dataloaders = get_cifar10_dataloaders(batch_size=16)
+        dataloaders = get_dataset_dataloaders(batch_size=16)
         print("Dataloader Structure: ", type(dataloaders), dataloaders)
 
         epochs = int(input("Enter number of epochs for MobileNet training: "))
@@ -30,26 +30,26 @@ def main():
             elif len(dataloaders) == 3:
                 train_loader, val_loader, test_loader = dataloaders
             else:
-                raise ValueError("Unexpected number of values returned by get_cifar10_dataloaders.")
+                raise ValueError("Unexpected number of values returned by get_dataset_dataloaders.")
         elif isinstance(dataloaders, dict):
             train_loader = dataloaders.get("train")
             val_loader = dataloaders.get("val")
             test_loader = dataloaders.get("test")
         else:
-            raise ValueError("get_cifar10_dataloaders returned an unsupported type.")
+            raise ValueError("get_dataset_dataloaders returned an unsupported type.")
 
         train_mobilenet(train_loader, val_loader, epochs=epochs, learning_rate=learning_rate)
 
     elif choice == "3":
         from src.models.train_detr import train_detr
-        from src.cifar10_dataset import get_cifar10_dataloaders
+        from src.dataset_dataset import get_dataset_dataloaders
 
-        dataloaders = get_cifar10_dataloaders(batch_size=16)
+        dataloaders = get_dataset_dataloaders(batch_size=16)
         print("Dataloader Structure: ", type(dataloaders), dataloaders)
 
         epochs = int(input("Enter number of epochs for DETR (Tuned) training: "))
         learning_rate = float(input("Enter learning rate for DETR (Tuned): "))
-
+ """
         # Handle different return types
         if isinstance(dataloaders, tuple):
             if len(dataloaders) == 2:
@@ -57,13 +57,13 @@ def main():
             elif len(dataloaders) == 3:
                 train_loader, val_loader, test_loader = dataloaders
             else:
-                raise ValueError("Unexpected number of values returned by get_cifar10_dataloaders.")
+                raise ValueError("Unexpected number of values returned by get_dataset_dataloaders.")
         elif isinstance(dataloaders, dict):
             train_loader = dataloaders.get("train")
             val_loader = dataloaders.get("val")
             test_loader = dataloaders.get("test")
         else:
-            raise ValueError("get_cifar10_dataloaders returned an unsupported type.")
+            raise ValueError("get_dataset_dataloaders returned an unsupported type.")
 
         train_detr(train_loader, val_loader, epochs=epochs, learning_rate=learning_rate)
 

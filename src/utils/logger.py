@@ -112,7 +112,7 @@ def log_precision_recall_curve(labels, probabilities, model_name, save_path="log
     labels_np = labels.numpy()
     probabilities_np = probabilities.numpy()
 
-    for i in range(num_classes):
+"""     for i in range(num_classes):
         precision, recall, _ = precision_recall_curve((labels_np == i).astype(int), probabilities_np[:, i])
         plt.plot(recall, precision, label=f"Class {i}")
 
@@ -126,3 +126,4 @@ def log_precision_recall_curve(labels, probabilities, model_name, save_path="log
     plt.savefig(plot_path)
     plt.close()
     log_message(f"Precision-Recall curves saved at {plot_path}", model_name)
+ """
