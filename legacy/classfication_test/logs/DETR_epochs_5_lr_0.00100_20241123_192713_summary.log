@@ -1,0 +1,10 @@
+Parameters: 41503694
+Loss: 2.319476, Accuracy: 9.75%
+Loss: 2.305267, Accuracy: 9.88%
+Loss: 2.304340, Accuracy: 9.94%
+Loss: 2.303996, Accuracy: 9.91%
+Loss: 2.303955, Accuracy: 9.88%
+
+Total Training Time: 23708.16 seconds
+Average Time per Epoch: 4741.63 seconds
+

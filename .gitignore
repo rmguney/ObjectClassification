@@ -1,0 +1,47 @@
+# Ignore virtual environment
+env/
+*.pyc
+__pycache__/
+
+# Ignore data files (if they are large or generated during runtime)
+data/cifar10/
+data/images/
+
+# Ignore IDE and OS-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore model checkpoints or outputs (add a directory name if necessary)
+saved_models/
+*.ckpt
+*.h5
+*.onnx
+*.pth
+
+# Ignore Python cache files
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore compiled files
+*.so
+*.dll
+*.dylib
+
+# Ignore runtime files
+*.pid
+*.out
+*.err
+
+# Ignore generated configuration files
+*.config
+*.env
+.env

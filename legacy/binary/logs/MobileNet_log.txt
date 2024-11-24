@@ -1,0 +1,8 @@
+Loss: 0.0012377074902808968, Accuracy: 99.95940460081191
+Loss: 3.2767596590846635e-06, Accuracy: 100.0
+Loss: 1.8306947812230978e-06, Accuracy: 100.0
+Loss: 1.0737910689372119e-06, Accuracy: 100.0
+Loss: 6.37750021781395e-07, Accuracy: 100.0
+
+Total Training Time: 887.47 seconds
+Average Time per Epoch: 177.49 seconds
